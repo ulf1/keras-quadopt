@@ -3,12 +3,11 @@
     "name": "Ulf Hamster",
     "orcid": "0000-0002-0440-4868"
   }],
-  "title": "template_pypi: Lorem Ipsum",
-  "description": "Lorem Ipsum.",
+  "title": "keras-quadopt",
+  "description": "Solving quadratic optimization problems with resource constraints and upper boundaries using TF2/Keras.",
   "license": "Apache-2.0",
   "upload_type": "software",
   "keywords": [
-    "keyword 1",
-    "keyword 2"
+    "quadratic programming"
   ]
 }

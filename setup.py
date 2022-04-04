@@ -19,17 +19,18 @@ def get_version(path):
 
 
 setuptools.setup(
-    name='template_pypi',
-    version=get_version("template_pypi/__init__.py"),
-    description='lorem ipsum',
+    name='keras-quadopt',
+    version=get_version("keras-quadopt/__init__.py"),
+    description='Solving quadratic optimization problems with Keras.',
     long_description=read('README.rst'),
-    url='http://github.com/myorg/template_pypi',
-    author='John Doe',
+    url='http://github.com/satzbeleg/keras-quadopt',
+    author='Ulf Hamster',
     author_email='554c46@gmail.com',
     license='Apache License 2.0',
-    packages=['template_pypi'],
-    install_requires=[],
-    # scripts=['scripts/examplescript.py'],
+    packages=['keras_quadopt'],
+    install_requires=[
+        "tensorflow>=2.4.0,<3"
+    ],
     python_requires='>=3.6',
     zip_safe=True
 )

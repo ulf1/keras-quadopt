@@ -1,67 +1,75 @@
-[![PyPI version](https://badge.fury.io/py/template_pypi.svg)](https://badge.fury.io/py/template_pypi)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4284804.svg)](https://doi.org/10.5281/zenodo.4284804)
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/myorg/template_pypi/master?urlpath=lab)
-[![Gitpod - Code Now](https://img.shields.io/badge/Gitpod-code%20now-blue.svg?longCache=true)](https://gitpod.io#https://github.com/myorg/template_pypi)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/myorg/template_pypi.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/myorg/template_pypi/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/myorg/template_pypi.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/myorg/template_pypi/context:python)
-[![template_pypi](https://snyk.io/advisor/python/template_pypi/badge.svg)](https://snyk.io/advisor/python/template_pypi)
+[![PyPI version](https://badge.fury.io/py/keras-quadopt.svg)](https://badge.fury.io/py/keras-quadopt)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/satzbeleg/keras-quadopt.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/satzbeleg/keras-quadopt/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/satzbeleg/keras-quadopt.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/satzbeleg/keras-quadopt/context:python)
 
-# template_pypi
-
-## DELETE THIS LATER 
-Download template_pypi and rename it
-
-```
-git clone git@github.com:kmedian/template_pypi.git mycoolpkg
-cd mycoolpkg
-bash rename.sh "myorg" "mycoolpkg" "Real Name"
-```
-
-Reinitialize the repo:
-
-```
-rm -rf .git
-git init
-git remote add origin git@github.com:myorg/mycoolpkg.git
-```
-
+# keras-quadopt
+Solving quadratic optimization problems with resource constraints and upper boundaries using TF2/Keras.
 
 ## Usage
 
-Table of Contents
+```py
+import tensorflow as tf
+import keras_quadopt as kqp
+import time
 
-* [Use Case 1](#use-case-1)
+# goodness scores
+good = tf.constant([.51, .53, .55, .57])
+
+# similarity matrices
+simi_1 = tf.constant([
+    [1, .9, .8, .7],
+    [.9, 1, .6, .5],
+    [.8, .6, 1, .4],
+    [.7, .5, .4, 1],
+])
+
+simi_2 = tf.constant([
+    [1, .7, .8, .3],
+    [.7, 1, .4, .2],
+    [.8, .4, 1, .6],
+    [.3, .2, .6, 1],
+])
+
+# preference parameters
+lam = 0.4
+beta_1 = 0.25
+beta_2 = 0.75
+
+# compute weights
+simi = kqp.aggregate_matrices(simi_1, beta_1, simi_2, beta_2)
+
+start = time.time()
+wbest, fbest = kqp.get_weights(good, simi, lam)
+print(f"elapsed: {time.time() - start}")
+```
 
 
-### Use Case 1
 
 
 ## Appendix
 
 ### Installation
-The `template_pypi` [git repo](http://github.com/myorg/template_pypi) is available as [PyPi package](https://pypi.org/project/template_pypi)
+The `keras-quadopt` [git repo](http://github.com/satzbeleg/keras-quadopt) is available as [PyPi package](https://pypi.org/project/keras-quadopt)
 
 ```sh
-pip install template_pypi
-pip install git+ssh://git@github.com/myorg/template_pypi.git
+pip install keras-quadopt
+pip install git+ssh://git@github.com/satzbeleg/keras-quadopt.git
 ```
 
 ### Install a virtual environment
 
 ```sh
-python3.6 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt --no-cache-dir
 pip install -r requirements-dev.txt --no-cache-dir
-pip install -r requirements-demo.txt --no-cache-dir
 ```
 
 (If your git repo is stored in a folder with whitespaces, then don't use the subfolder `.venv`. Use an absolute path without whitespaces.)
 
 ### Python commands
 
-* Jupyter for the examples: `jupyter lab`
 * Check syntax: `flake8 --ignore=F401 --exclude=$(grep -v '^#' .gitignore | xargs | sed -e 's/ /,/g')`
 * Run Unit Tests: `PYTHONPATH=. pytest`
 
@@ -84,8 +92,8 @@ rm -r .venv
 
 
 ### Support
-Please [open an issue](https://github.com/myorg/template_pypi/issues/new) for support.
+Please [open an issue](https://github.com/satzbeleg/keras-quadopt/issues/new) for support.
 
 
 ### Contributing
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/myorg/template_pypi/compare/).
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/satzbeleg/keras-quadopt/compare/).
