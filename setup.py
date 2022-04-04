@@ -20,7 +20,7 @@ def get_version(path):
 
 setuptools.setup(
     name='keras-quadopt',
-    version=get_version("keras-quadopt/__init__.py"),
+    version=get_version("keras_quadopt/__init__.py"),
     description='Solving quadratic optimization problems with Keras.',
     long_description=read('README.rst'),
     url='http://github.com/satzbeleg/keras-quadopt',
