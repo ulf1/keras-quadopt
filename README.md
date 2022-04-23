@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/keras-quadopt.svg)](https://badge.fury.io/py/keras-quadopt)
+[![PyPi downloads](https://img.shields.io/pypi/dm/keras-quadopt)](https://img.shields.io/pypi/dm/keras-quadopt)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/satzbeleg/keras-quadopt.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/satzbeleg/keras-quadopt/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/satzbeleg/keras-quadopt.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/satzbeleg/keras-quadopt/context:python)
 
