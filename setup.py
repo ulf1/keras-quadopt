@@ -22,8 +22,9 @@ setuptools.setup(
     name='keras-quadopt',
     version=get_version("keras_quadopt/__init__.py"),
     description='Solving quadratic optimization problems with Keras.',
-    long_description=read('README.rst'),
-    url='http://github.com/satzbeleg/keras-quadopt',
+    long_description=read('README.md'),
+    long_description_content_type='text/markdown',
+    url='http://github.com/ulf1/keras-quadopt',
     author='Ulf Hamster',
     author_email='554c46@gmail.com',
     license='Apache License 2.0',
@@ -31,6 +32,6 @@ setuptools.setup(
     install_requires=[
         "tensorflow>=2.4.0,<3"
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     zip_safe=True
 )
