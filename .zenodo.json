@@ -3,11 +3,15 @@
     "name": "Ulf Hamster",
     "orcid": "0000-0002-0440-4868"
   }],
-  "title": "keras-quadopt",
+  "title": "keras-quadopt: Solving Constrained Quadratic Optimization Problems with Reverse Automatic Differentation (Keras/TF2).",
   "description": "Solving quadratic optimization problems with resource constraints and upper boundaries using TF2/Keras.",
   "license": "Apache-2.0",
   "upload_type": "software",
   "keywords": [
-    "quadratic programming"
+    "quadratic programming",
+    "constrained optimization",
+    "optimization problem",
+    "keras", "tensorflow",
+    "reverse automatic differentiation"
   ]
 }
