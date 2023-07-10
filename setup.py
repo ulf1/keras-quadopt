@@ -32,6 +32,6 @@ setuptools.setup(
     install_requires=[
         "tensorflow>=2.4.0,<3"
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     zip_safe=True
 )
