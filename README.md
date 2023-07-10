@@ -1,5 +1,6 @@
 [![PyPI version](https://badge.fury.io/py/keras-quadopt.svg)](https://badge.fury.io/py/keras-quadopt)
 [![PyPi downloads](https://img.shields.io/pypi/dm/keras-quadopt)](https://img.shields.io/pypi/dm/keras-quadopt)
+[![DOI](https://zenodo.org/badge/477837694.svg)](https://zenodo.org/badge/latestdoi/477837694)
 
 # keras-quadopt: Solving Constrained Quadratic Optimization Problems with Reverse Automatic Differentation (Keras/TF2)
 Solving quadratic optimization problems with resource constraints and upper boundaries using TF2/Keras.
